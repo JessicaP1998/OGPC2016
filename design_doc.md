@@ -10,9 +10,13 @@ Sasha Leamy
 	
 9/11/15
 	Supplies needed for the controller:
-1 flora board
-3 buttons (depending on OGPC requirements)
-coated wire 
+	
+1 flora board;
+
+3 buttons (depending on OGPC requirements);
+
+coated wire;
+
 case (hopefully 3-D printed)
 
 Game Mechanics:
