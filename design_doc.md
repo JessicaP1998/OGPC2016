@@ -48,4 +48,7 @@ Game Mechanics:
 	-Increase Monster health each level, but not attack
 	-Pokemon style attack
 
+10/27/2015
+
+	Sasha is learning libGDX and Jessica is working on the Arduino input to java.
 
