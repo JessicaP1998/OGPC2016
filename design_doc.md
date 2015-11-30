@@ -51,4 +51,11 @@ Game Mechanics:
 10/27/2015
 
 	Sasha is learning libGDX and Jessica is working on the Arduino input to java.
+	
+11/30/2015
 
+	Sasha:
+	I created the ability to move around and switch between characters, which also switches the background. Now I am 		working on creating a main menu for the game. The two characters also move at different speeds.
+	
+	Jessica:
+	I was able to get an arduino uno to give input to the computer, which will allow us to build the controller for the 		game. Now I am trying to get the arduino to feed into eclipse.
