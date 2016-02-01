@@ -99,9 +99,14 @@ public class Menu implements Screen{
 		TextButton newGameButton = new TextButton("New Game", skin);
 		newGameButton.setPosition(Gdx.graphics.getWidth()/2-Gdx.graphics.getWidth()/8, (4*Gdx.graphics.getHeight())/6);
 		stage.addActor(newGameButton);
+		
 		TextButton continueButton = new TextButton("Continue",skin);
 		continueButton.setPosition(Gdx.graphics.getWidth()/2-Gdx.graphics.getWidth()/8, (3*Gdx.graphics.getHeight())/6);
 		stage.addActor(continueButton);
+		
+		TextButton settingsButton = new TextButton("Settings",skin);
+		settingsButton.setPosition(Gdx.graphics.getWidth()/2-Gdx.graphics.getWidth()/8, (2*Gdx.graphics.getHeight())/6);
+		stage.addActor(settingsButton);
 		
 		newGameButton.addListener(new ChangeListener(){
 			@Override

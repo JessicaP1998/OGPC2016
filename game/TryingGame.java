@@ -28,14 +28,5 @@ public class TryingGame extends Game {
             play = new GameScreen(this);
             setScreen(mainMenu);              
     }
-	
-	
-//	public void render(float delta) {
-//		super.render();
-//	}
-	
-//	public void dispose(){
-//		batch.dispose();
-//	}
 
 }
