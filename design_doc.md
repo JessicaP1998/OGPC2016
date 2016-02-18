@@ -5,7 +5,7 @@ For our project the plan is to build a controller that can communicate with a co
 The Controller
 The controller will be a simple design with a directional pad on the left hand side. In the bottom center of the controller there will be the menu button. On the right side of the controller there will be a select button and a switch character button. They will be positioned diagonally from each other, but close to the center. A class will be used to enable communication to the game itself.
  
-We also plan on working on the Abstract Algebra app but we are not sure what is going to be happening with that yet.
+We also plan on working on the Abstract Algebra app but we are not sure what is going to be happening with that.
  
 9/11/15 Supplies needed for the controller:
 -          1 flora board
@@ -21,6 +21,8 @@ Plot and crucial moments in the game:
 3.       Upon entering the building the player is confronted with the first of the moral decisions. There is a mutant on the edge of death that asks for someone to grab his teddy bear. The mother is scared and revolted, but the child sees things differently.
 4.       The player choses to help or not help the mutant, and that decision will impact how they get out. Upon exiting the mother and child must run from falling shrapnel.
 5.       The game will continue in this manner with six people that you can help. Three of which die and show up in the end.
+
+ We are also planning on using the game to compete in project Mythos, but how that will impact the story and design of the game is unknown.
  
 10/27/2015
 Sasha is learning libGDX and Jessica is working on the Arduino input to java.
@@ -53,3 +55,9 @@ Creating separate classes for the movement of the mother and child.
 Jessica:
 Working on designing the circuit for the controller and having a list of all of the supplies that we need. Additionally creating a compatible class for receiving input from the Arduino.
 
+18/2/2016
+
+Sasha: I have created seperate classes for movement and have figured out how to select within a set area and have that change 
+the background. The next step is to draw and combine the code with Jessica.
+
+Jessica: I have finished the controller design and the class to communicate the controller. Also I have started on the CAD design for the controller case and the settings menu. We will be combining the code and reaching the final steps of the basic mechanics.
