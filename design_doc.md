@@ -55,9 +55,20 @@ Creating separate classes for the movement of the mother and child.
 Jessica:
 Working on designing the circuit for the controller and having a list of all of the supplies that we need. Additionally creating a compatible class for receiving input from the Arduino.
 
-18/2/2016
+2/18/2016
 
-Sasha: I have created seperate classes for movement and have figured out how to select within a set area and have that change 
+Sasha:
+I have created seperate classes for movement and have figured out how to select within a set area and have that change 
 the background. The next step is to draw and combine the code with Jessica.
 
-Jessica: I have finished the controller design and the class to communicate the controller. Also I have started on the CAD design for the controller case and the settings menu. We will be combining the code and reaching the final steps of the basic mechanics.
+Jessica:
+I have finished the controller design and the class to communicate the controller. Also I have started on the CAD design for the controller case and the settings menu. We will be combining the code and reaching the final steps of the basic mechanics.
+
+
+3/11/2016
+
+Sasha:
+Working on the art work, and finishing up the GameScreen class. She has made an instructions page, and we have finished combining our code. Now the game will accept controller input.
+
+Jessica:
+After combining code with Sasha, I have been working on finishing the soldered controller and should finish that before spring break. Also I plan on finishing the CAD drawings during Spring Break.
