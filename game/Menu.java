@@ -95,6 +95,7 @@ public class Menu implements Screen{
 		// TODO Auto-generated method stub
 		Gdx.input.setInputProcessor(stage);
 		
+		//Positions and draws the buttons.
 		createBasicSkin();
 		TextButton newGameButton = new TextButton("New Game", skin);
 		newGameButton.setPosition(Gdx.graphics.getWidth()/2-Gdx.graphics.getWidth()/8, (4*Gdx.graphics.getHeight())/6);
@@ -108,10 +109,22 @@ public class Menu implements Screen{
 		settingsButton.setPosition(Gdx.graphics.getWidth()/2-Gdx.graphics.getWidth()/8, (2*Gdx.graphics.getHeight())/6);
 		stage.addActor(settingsButton);
 		
+		TextButton instructionsButton = new TextButton("Instructions",skin);
+		instructionsButton.setPosition(Gdx.graphics.getWidth()/2-Gdx.graphics.getWidth()/8, (Gdx.graphics.getHeight())/6);
+		stage.addActor(instructionsButton);
+		
+		//Checks to see if "New Game" is pressed, if it is, the game starts.
 		newGameButton.addListener(new ChangeListener(){
 			@Override
 			public void changed(ChangeEvent event, Actor actor){
 				game.setScreen(game.play);
+			}
+		});
+		
+		instructionsButton.addListener(new ChangeListener(){
+			@Override
+			public void changed(ChangeEvent event, Actor actor){
+				game.setScreen(game.inst);
 			}
 		});
 		
