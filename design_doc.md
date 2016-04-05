@@ -61,3 +61,25 @@ Sasha: I have created seperate classes for movement and have figured out how to 
 the background. The next step is to draw and combine the code with Jessica.
 
 Jessica: I have finished the controller design and the class to communicate the controller. Also I have started on the CAD design for the controller case and the settings menu. We will be combining the code and reaching the final steps of the basic mechanics.
+
+3/3/2016
+
+Sasha:
+Has successfully combined the game code with Jessica's controller code, and has created an instructions code in the menu.
+
+Jessica:
+I have worked on combining the code with Sasha, and have began to solder the controller.
+
+3/17/2016
+
+Sasha:
+Has worked on updating and cleaning up the code in the engine to allow for seemless communication.
+
+Jessica:
+Has worked on soldering the controller and finishing up any 3D design for the controller.
+
+4/4/2016
+
+Sasha: Has been working on the artwork and coordinating with the music department on the music.
+
+Jessica: Has been working on finalizing the CAD drawing for the controller, and updating the arduino code. I will be finishing up the soldering, and making the sequence where the character is running away from the debris.
