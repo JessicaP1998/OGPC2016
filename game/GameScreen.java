@@ -20,6 +20,10 @@ public class GameScreen implements Screen{
 	SpriteBatch batch;
 	public Texture textureTest;
 	public Texture textureSwitch;
+	public Texture backgroundOneMum;
+	public Texture backgroundTwoMum;
+	public Texture backgroundOneKid;
+	public Texture backgroundTwoKid;
 	public Sprite spriteTest;
 	public Sprite spriteSwitch;
 	Vector2 position;
@@ -29,13 +33,17 @@ public class GameScreen implements Screen{
 	int op = 0;
 	SerialTestMain contr;
 	public int cnsl;
+	public int xlimr =500;
+	public int xliml = 500;
+	public int ylimu = 500;
+	public int ylimd = 500;
 	
 	static Animation walk;
 	static TextureRegion[] walkFrame;
 	static TextureRegion currentFrame;
 	static float stateTime;
-	static final int FRAME_COLS = 1;
-	static final int FRAME_ROWS = 4;
+	static final int FRAME_COLS = 6;
+	static final int FRAME_ROWS = 1;
 	
 	public GameScreen(TryingGame game){
 		this.game = game;
@@ -54,9 +62,14 @@ public class GameScreen implements Screen{
 		
 		//Setting the textures for the characters. textureTest is the kid, textureSwitch is the mother.
 		textureTest = new Texture(Gdx.files.internal("Kid-standing_Foreward.png"));
-		textureSwitch = new Texture(Gdx.files.internal("Mother_Sprite_Sheet_PT1.png"));
+		textureSwitch = new Texture(Gdx.files.internal("SpriteSheetMum.png"));
 		
-		TextureRegion[][] tmp = new TextureRegion(textureSwitch).split( textureSwitch.getWidth()/FRAME_COLS,textureSwitch.getHeight()/FRAME_ROWS);
+		backgroundOneMum = new Texture(Gdx.files.internal("BackgroundMumWall.png"));
+		backgroundTwoMum = new Texture(Gdx.files.internal("InsideMum.png"));
+		backgroundOneKid = new Texture(Gdx.files.internal("BackgroundKidWall.png"));
+		backgroundTwoKid = new Texture(Gdx.files.internal("InsideKid.png"));
+		
+		TextureRegion[][] tmp = new TextureRegion(textureSwitch).split( textureSwitch.getWidth()/7,textureSwitch.getHeight()/4);
 		walkFrame = new TextureRegion[FRAME_COLS * FRAME_ROWS];
 		
 		int index = 0;
@@ -65,6 +78,9 @@ public class GameScreen implements Screen{
 				walkFrame[index++]=tmp[i][j];
 			}
 		}
+		
+		walk = new Animation(.1f, walkFrame);
+		stateTime = 0f;
 		
 		//Creating the sprites for the kid and mother using the textures which are sprite sheets.
 		spriteSwitch = new Sprite(textureSwitch);
@@ -114,8 +130,15 @@ public class GameScreen implements Screen{
 	}
 	@Override
 	public void render(float delta) {
+		if(sl.scrnOne == true){
+			xlimr = Gdx.graphics.getWidth() - 200;
+			xliml = 0;
+			ylimu = (Gdx.graphics.getHeight()/2)+100;
+			ylimd =  0;
+		}
 		
 		cnsl = mv.thing;
+
 
 		//Sets which character is selected by calling on the corresponding function in the movement class.
 		sw = mv.change();
@@ -136,12 +159,21 @@ public class GameScreen implements Screen{
 		//Rendering the kid.
 		if(sw == false){
 			//gets x and y positions from the movement class.
-			xp = mv.xpos(spriteTest.getX());
-			yp = mv.ypos(spriteTest.getY());
+			xp = mv.xpos(spriteTest.getX(), xlimr, xliml);
+			yp = mv.ypos(spriteTest.getY(), ylimu, ylimd);
 			
 			//Setting the background colour.
 			Gdx.gl.glClearColor(sl.p, sl.t, sl.c, 1);
 			Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+			
+			if(sl.scrnTwo == false && sl.scrnOne == true){
+				batch.draw(backgroundOneKid, 0,0);
+	//			xlim = 1000;
+	//			ylim = 550;
+			}
+			else if(sl.scrnOne == false && sl.scrnTwo == true){
+				batch.draw(backgroundTwoKid, 0, 0);
+			}
 			
 			//Draws the sprite for the kid.
 			spriteTest.setPosition(xp, yp);
@@ -153,15 +185,23 @@ public class GameScreen implements Screen{
 		//Rendering the mother.
 		else if(sw == true){
 			//Gets mother's x,y position from the movement class.
-			xp = mv.xpos(spriteSwitch.getX());
-			yp = mv.ypos(spriteSwitch.getY());
+			xp = mv.xpos(spriteSwitch.getX(), xlimr, xliml);
+			yp = mv.ypos(spriteSwitch.getY(), ylimu, ylimd);
 			
 			//Setting the backdrop colour.
 			Gdx.gl.glClearColor(sl.r, sl.g, sl.b, 0);
 			Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 			
+			if(sl.scrnTwo == false && sl.scrnOne == true){
+				batch.draw(backgroundOneMum, 0,0);
+			}
+			else if(sl.scrnOne == false && sl.scrnTwo == true){
+				batch.draw(backgroundTwoMum, 0, 0);
+			}
+			
 
-			currentFrame = walkFrame[mv.dire];
+			//currentFrame = walkFrame[mv.dire];
+			currentFrame = walk.getKeyFrame(stateTime, true);
 			batch.draw(currentFrame, xp, yp);
 
 			

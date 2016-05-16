@@ -28,6 +28,9 @@ public class SerialTestMain implements SerialPortEventListener {
 			"/dev/ttyUSB0", // Linux
 			"COM3", // Windows this might have to be changed depending on the board and computer 
 			"COM4",
+			"COM6",
+			"COM2",
+			
 	};
 	/**
 	* A BufferedReader which will be fed by a InputStreamReader 

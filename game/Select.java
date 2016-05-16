@@ -23,7 +23,7 @@ public class Select {
 		if(scrnOne == true){
 			if(swtch == true){
 				//if interaction is valid, boolean changes which could either be game screen change or an interaction.
-				if(xc>=150 && xc<=250 && yc>=150 && yc<=250){
+				/*if(xc>=150 && xc<=250 && yc>=150 && yc<=250){
 					scrnTwo = true;
 					scrnOne = false;
 					p = 22/255f;
@@ -32,10 +32,10 @@ public class Select {
 					r = 200/255f;
 					g = 25/255f;
 					b = 100/255f;
-				}
+				}*/
 			}
 			else{
-				if(xc>=300 && xc<=350 && yc>=150 && yc<=250){
+				if(xc>=300 && xc<=500 && yc>=100 && yc<=300){
 					scrnTwo = true;
 					scrnOne = false;
 					p = 22/255f;

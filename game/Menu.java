@@ -26,6 +26,8 @@ public class Menu implements Screen{
 	TextButton newGameButton;
 	Viewport viewport;
 	SpriteBatch batch;
+	CharSequence title;
+	BitmapFont font;
 	
 	public Menu(final TryingGame gam){
 			this.game = gam;
@@ -72,6 +74,8 @@ public class Menu implements Screen{
 		textButtonStyle.over = skin.newDrawable("background", Color.MAGENTA);
 		textButtonStyle.font = skin.getFont("default");
 		skin.add("default", textButtonStyle);
+		
+		
 	}
 	
 	
@@ -94,6 +98,8 @@ public class Menu implements Screen{
 	public void show() {
 		// TODO Auto-generated method stub
 		Gdx.input.setInputProcessor(stage);
+		
+		title = "Rush to Safety";
 		
 		//Positions and draws the buttons.
 		createBasicSkin();
@@ -127,7 +133,7 @@ public class Menu implements Screen{
 				game.setScreen(game.inst);
 			}
 		});
-		
+		font = new BitmapFont();
 	}
 
 
@@ -177,6 +183,8 @@ public class Menu implements Screen{
 	
 		batch.begin();
 		camera.update();
+		
+		font.draw(batch, title, Gdx.graphics.getWidth()/2, 50);
 		
 		batch.setProjectionMatrix(camera.combined);
 		batch.end();

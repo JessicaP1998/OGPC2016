@@ -26,8 +26,8 @@ public class KidMovement extends Entity{
 	public void create(){
 		batch = new SpriteBatch();
 		
-		x = 230;
-		y = 230;
+		x = 100;
+		y = 100;
 		
 		//Declaring the select class and the controller input class.
 		intr = new Select(); 
@@ -57,7 +57,7 @@ public class KidMovement extends Entity{
 	}
 	
 	//Class determines character movement in the x direction based on input from controller or keyboard.
-	public float xpos(float xx){
+	public float xpos(float xx, float limr, float liml){
 		thing = cntr.dr;
 		
 		
@@ -65,13 +65,13 @@ public class KidMovement extends Entity{
 			
 			if(Gdx.input.isKeyPressed(Input.Keys.LEFT) || thing == 4){
 				//Checks if the character is within the constraints of the screen, if at the edge, character won't move.
-				if(xx < Gdx.graphics.getWidth() && xx > 0)
+				if(xx < limr && xx > liml)
 					x -=2f;
 					dire = 3;
 			}
 			
 			if(Gdx.input.isKeyPressed(Input.Keys.RIGHT) || thing == 6){
-				if(xx+256 < Gdx.graphics.getWidth() && xx > -5)
+				if(xx+(96/2) < limr && xx > liml-5)
 					x +=2f;	
 					dire = 2;
 			}
@@ -79,14 +79,14 @@ public class KidMovement extends Entity{
 		
 		if(switcher == true ){
 			if(Gdx.input.isKeyPressed(Input.Keys.LEFT) || thing == 4){
-				if(xx < Gdx.graphics.getWidth() && xx > 0)
+				if(xx < limr && xx > liml)
 					x -=3f;
-					dire = 3;
+					dire = 21;
 			}
 			if(Gdx.input.isKeyPressed(Input.Keys.RIGHT) || thing == 6){
-				if(xx+256 < Gdx.graphics.getWidth() && xx > -5)
+				if(xx+(128/2) < limr && xx > liml-5)
 					x +=3f;
-					dire = 2;
+					dire = 14;
 			}
 		}
 		
@@ -94,18 +94,18 @@ public class KidMovement extends Entity{
 	}
 	
 	//Class determines character movement in the y direction based on input from controller or keyboard.
-	public float ypos(float yy){
+	public float ypos(float yy, float limu, float limd){
 		
 		thing = cntr.dr;
 		
 		if(switcher == false ){
 			if(Gdx.input.isKeyPressed(Input.Keys.UP) || thing == 8){
-				if(yy+256 < Gdx.graphics.getHeight() && yy > -5)
+				if(yy+(192) < limu && yy > limd-5)
 					y +=2f;
 					dire = 1;
 			}
 			if(Gdx.input.isKeyPressed(Input.Keys.DOWN) || thing == 2){
-				if(yy < Gdx.graphics.getHeight() && yy > 0)
+				if(yy < limu && yy > limd)
 					y -=2f;
 					dire = 0;
 			}
@@ -113,14 +113,15 @@ public class KidMovement extends Entity{
 		
 		if(switcher == true ){
 			if(Gdx.input.isKeyPressed(Input.Keys.UP) || thing == 8){
-				if(yy+384 < Gdx.graphics.getHeight() && yy > -5)
+				if(yy+(288) < limu && yy > limd-5)
 					y +=3f;
-					dire = 1;
+					dire = 7;
 			}
 			if(Gdx.input.isKeyPressed(Input.Keys.DOWN) || thing == 2){
-				if(yy < Gdx.graphics.getHeight() && yy > 0)
+				if(yy < limu && yy > limd)
 					y -=3f;
-					dire = 0;
+					screen.stateTime += Gdx.graphics.getDeltaTime();
+
 			}
 		}
 		
