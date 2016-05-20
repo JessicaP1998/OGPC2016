@@ -80,6 +80,24 @@ Has worked on soldering the controller and finishing up any 3D design for the co
 
 4/4/2016
 
-Sasha: Has been working on the artwork and coordinating with the music department on the music.
+Sasha:
+Has been working on the artwork and coordinating with the music department on the music.
 
-Jessica: Has been working on finalizing the CAD drawing for the controller, and updating the arduino code. I will be finishing up the soldering, and making the sequence where the character is running away from the debris.
+Jessica: 
+Has been working on finalizing the CAD drawing for the controller, and updating the arduino code. I will be finishing up the soldering, and making the sequence where the character is running away from the debris.
+
+4/18/2016
+
+Sasha: 
+Has been working on getting the necessary art done for OGPC.
+
+Jessica:
+Has been trying to finish up the 3-D model and working out the kinks in the arduino code.
+
+4/25/2016
+
+Sasha:
+Has worked on putting bounds on the screen and inputting the walking animations.
+
+Jessica:
+Has worked on getting libGDX to work on the computers. 
