@@ -1,6 +1,10 @@
-Jessica Peterson Sasha Leamy
+Jessica Peterson & Sasha Leamy
 
 For our project the plan is to build a controller that can communicate with a computer game, which we plan to enter in OGPC. Our biggest problem will be trying to get the communication between the circuitry and the video game. As for the nature of the game, we are not completely sure since we do not know the topic for this year yet. The game will be programmed in Java and we plan on emailing David Anuta, who graduated last year but also made a game using a physical device, in order to get some information as to how he went about making the dancing game. Since we do not know about the topic for OGPC yet we will be working on menus, options and learning about what to use to build the circuitry and how to communicate between it and the computer.
+
+How to Install and Set-Up RXTX in Eclipse
+The first thing that you need to do is find out how many bits your computer is. If it is 32 bit go to http://rxtx.qbang.org/wiki/index.php/Download. If it is 64 bit go to http://fizzed.com/oss/rxtx-for-java. Once you download it, extract the file. Inside of the newly extracted file there should be RXTXcomm.jar, rxtxParallel.dll, and rxtxSerial.dll. These should all go into various folders in your java folder which should be located. The RXTXcomm.jar should go into the Windows(C:), programfiles java into the lib ext folder. The rxtxParallel.dll and rxtxSerial.dll should go into the bin folder in java.
+Adding the RXTX libraries into your eclipse project can be done by first adding a lib folder in your project. Copy RXTXcomm, rxtxParallel, and rxtxSerial all into that new folder. Next right click on you project folder and then go down to build path > configure build path. Once there click on add Jars and then add RXTXcomm.jar. click ok. Then expand RXTXcomm.jar, and click on native library location and then on edit. Edit the location to be you lib folder in the project. Check and make sure that the project compiles and communicates with a device.
  
 The Controller
 The controller will be a simple design with a directional pad on the left hand side. In the bottom center of the controller there will be the menu button. On the right side of the controller there will be a select button and a switch character button. They will be positioned diagonally from each other, but close to the center. A class will be used to enable communication to the game itself.
@@ -39,7 +43,7 @@ Sasha:
 I created the ability to move around and switch between characters, which also switches the background. Now I am	working on creating a main menu for the game. The two characters also move at different speeds.
  
 Jessica:
-I was able to get an arduino uno to give input to the computer, which will allow us to build the controller for the 	game. Now
+I was able to get an arduino uno to give input to the computer, which will allow us to build the controller for the 	game. 
  
 12/7/15
 Sasha:
