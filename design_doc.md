@@ -7,16 +7,17 @@ The first thing that you need to do is find out how many bits your computer is. 
 Adding the RXTX libraries into your eclipse project can be done by first adding a lib folder in your project. Copy RXTXcomm, rxtxParallel, and rxtxSerial all into that new folder. Next right click on you project folder and then go down to build path > configure build path. Once there click on add Jars and then add RXTXcomm.jar. click ok. Then expand RXTXcomm.jar, and click on native library location and then on edit. Edit the location to be you lib folder in the project. Check and make sure that the project compiles and communicates with a device.
  
 The Controller
-The controller will be a simple design with a directional pad on the left hand side. In the bottom center of the controller there will be the menu button. On the right side of the controller there will be a select button and a switch character button. They will be positioned diagonally from each other, but close to the center. A class will be used to enable communication to the game itself.
+The controller will be a simple design with a directional pad on the left hand side. In the bottom center of the controller there will be the menu button. On the right side of the controller there will be a select button and a switch character button. They will be positioned diagonally from each other, but close to the center. A class will be used to enable communication to the game itself. The controller is soldered together, and resistors connect every button to the positive. Wires will connect them to pins on the controller. It is incased in a 3-D printed case.
  
 We also plan on working on the Abstract Algebra app but we are not sure what is going to be happening with that.
  
 9/11/15 Supplies needed for the controller:
--          1 flora board
+-          1 adafruit metro mini board
 -          6 buttons
 -          Coated wire
 -          Case (hopefully 3-D printed)
-Game mechanics as of 1/15/16
+-          
+Game mechanics
 Puzzle Story based Game
 The two main characters will remain the same: a mother and a child. The player will be able to move around the world by using the directional pad. The critical switch character piece will be used to switch between the mother and the child. When the user switches characters, the look of the world will change. The mother’s world will be darker, and supposedly more realistic. The child, on the other hand, will see the world more like and imaginary kingdom. Each perspective will hold the key to different puzzles throughout the course of the game. Additionally in the game the user will face critical moral choices that will change the way that the child or the mother views the world. Additionally some of the people will die right after being helped or ignored. This will come into play later because unbeknownst to the player at the beginning, the mother is dying of cancer caused by exposure to radiation during the war. In the end when the mother dies, the people who they helped, and died will reappear to welcome the mother and comfort the child.
 Plot and crucial moments in the game:
@@ -105,3 +106,19 @@ Has worked on putting bounds on the screen and inputting the walking animations.
 
 Jessica:
 Has worked on getting libGDX to work on the computers. 
+
+5/10/2016
+
+Sasha:
+Has been trying to finish drawing and and adding the art to the game.
+
+Jessica:
+Has been working on adding a falling debris class to the game.
+
+5/24/2016
+
+Sasha:
+Has been finishing the art, and finishing it up before the end of the year.
+
+Jessica:
+Has been updating the documentation, and ironing out any kinks in RXTX.
